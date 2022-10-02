@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class OccurenceOfDigitInANumber {
+    public static void main(String[] args) {
+        int n = 99122221;
+        Scanner input = new Scanner(System.in);
+        int a = input.nextInt();
+        int count = 0;
+        while (n!= 0){
+            int rem = n%10; //to get the last digit of the number
+            n = n/10; // to eliminate the last digit of the number
+            if (rem == a){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
